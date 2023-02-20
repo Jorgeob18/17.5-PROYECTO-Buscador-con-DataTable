@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscador múltiples campos - JS Moderno </title>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">  
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/jszip-2.5.0/dt-1.13.1/af-2.5.1/b-2.3.3/b-html5-2.3.3/datatables.min.css"/>
+</head>
+<body>
+
+    <h1>Buscador de Autos</h1>
+
+    <div class="contenedor">
+
+        
+
+        <form id="buscador">
+            <div class="row">
+                <div class="three columns">
+                    <label for="marca">Marca</label>
+                    <select class="u-full-width" id="marca">
+                        <option value="">Seleccione</option>
+                    </select>
+                </div>
+                <div class="three columns">
+                    <label for="year">Año</label>
+                    <select class="u-full-width" id="year">
+                        <option value="">Seleccione</option>
+                    </select>
+                </div>
+                <div class="three columns">
+                    <label for="minimo">Precio Min</label>
+                    <select class="u-full-width" id="minimo">
+                            <option value="">Seleccione</option>
+                            <option value="20000">20,000</option>
+                            <option value="30000">30,000</option>
+                            <option value="40000">40,000</option>
+                            <option value="50000">50,000</option>
+                            <option value="60000">60,000</option>
+                            <option value="70000">70,000</option>
+                            <option value="80000">80,000</option>
+                            <option value="90000">90,000</option>
+                    </select>
+                </div>
+                <div class="three columns">
+                    <label for="maximo">Precio Max</label>
+                    <select class="u-full-width" id="maximo">
+                            <option value="">Seleccione</option>
+                            <option value="20000">20,000</option>
+                            <option value="30000">30,000</option>
+                            <option value="40000">40,000</option>
+                            <option value="50000">50,000</option>
+                            <option value="60000">60,000</option>
+                            <option value="70000">70,000</option>
+                            <option value="80000">80,000</option>
+                            <option value="90000">90,000</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="four columns">
+                        <label for="puertas">Puertas</label>
+                        <select class="u-full-width" id="puertas">
+                                <option value="">Seleccione</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="four columns">
+                        <label for="transmision">Transmisión</label>
+                        <select class="u-full-width" id="transmision">
+                                <option value="">Seleccione</option>
+                                <option value="automatico">Automática</option>
+                                <option value="manual">Manual</option>
+                        </select>
+                    </div>
+                    <div class="four columns">
+                        <label for="color">Color</label>
+                        <select class="u-full-width" id="color">
+                                <option value="">Seleccione</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="reset">
+            <button type="button" id="reset">Resetear Busqueda</button>
+        </div>
+        <h1>Resultados</h1>
+        <div id="resultado">
+            <table id="example" class="display" width="100%">
+                <thead>
+                    <tr>
+                      <th>Marca</th>
+                      <th>Modelo</th>
+                      <th>Año</th>
+                      <th>Precio</th>
+                      <th>Puertas</th>
+                      <th>Transmision</th>
+                      <th>Color</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableresult">
+                  </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- <a class="sitio-web" href="https://www.codigoconjuan.com" rel="nofollow noopener noreferrer" >Código Con Juan</a> -->
+
+    <script src="js/db.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.6.0/jszip-2.5.0/dt-1.13.1/af-2.5.1/b-2.3.3/b-html5-2.3.3/datatables.min.js"></script>
+    
+</body>
+</html>
